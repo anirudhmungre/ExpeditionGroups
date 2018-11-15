@@ -1,4 +1,4 @@
-class Graph {  
+export class Graph {  
     constructor(numVertices){
         this.numVertices = numVertices 
         this.AdjList = new Map()
