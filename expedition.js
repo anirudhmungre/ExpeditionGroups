@@ -8,7 +8,6 @@ numPeople = line.length
 for (let i = 0; i < numPeople; i++) {
     arr.push(line[i].split(" "))
 }
-console.log(arr)
 g = new Graph()
 // Create vertices for people
 for (let i = 0; i < numPeople; i++) {
