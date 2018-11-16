@@ -2,7 +2,18 @@ const { Graph } = require("./Graph")
 const fs = require("fs")
 let data, line, g, numPeople, enemy
 let arr = []
-data = fs.readFileSync("./data1.txt", "utf-8")
+if (process.argv.length != 3){
+    console.log("Please input 3 arguments!\nEx: node FILENAME INPUTFILE")
+    process.kill(0)
+}
+try{
+    data = fs.readFileSync(process.argv[2], "utf-8")
+}
+catch (err){
+    console.error(err)
+    process.kill(0)
+}
+console.log("INPUT DATA:\n" + data)
 line = data.split('\n')
 numPeople = line.length
 for (let i = 0; i < numPeople; i++) {
