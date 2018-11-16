@@ -46,4 +46,4 @@ for (let i = 0; i < numPeople; i++) {                           // Loop through 
         process.kill(0)                                         // If seperation not possible kill program
     }
 }
-console.log("Group 1: " + g1 + "\nGroup 2: " + g2)              // Output group results
+console.log("\nGroup 1: " + g1 + "\nGroup 2: " + g2)              // Output group results
