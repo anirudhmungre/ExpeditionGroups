@@ -32,12 +32,8 @@ for (let i = 0; i < numPeople; i++) {
     badGrp = enemy.some(x => g.checkAdj(x).some(y => enemy.indexOf(y)>-1))
 
     if (!badGrp) {
-        if (!enemy.some(x => g1.indexOf(x)>-1)){
-            g1.push(i)
-        }
-        else if (!enemy.some(x => g2.indexOf(x)>-1)){
-            g2.push(i)
-        }
+        if (!enemy.some(x => g1.indexOf(x)>-1)){g1.push(i)}
+        else if (!enemy.some(x => g2.indexOf(x)>-1)){g2.push(i)}
         else{
             console.log("Seperation not possible")
             process.kill(0)
