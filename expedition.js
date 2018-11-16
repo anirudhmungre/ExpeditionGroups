@@ -2,7 +2,7 @@ const { Graph } = require("./Graph")
 const fs = require("fs")
 let data, line, g, numPeople, enemy
 let arr = []
-data = fs.readFileSync("./sampleData1.txt", "utf-8")
+data = fs.readFileSync("./data1.txt", "utf-8")
 line = data.split('\n')
 numPeople = line.length
 for (let i = 0; i < numPeople; i++) {
