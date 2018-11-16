@@ -1,15 +1,23 @@
-export class Graph {  
-    constructor(numVertices){
-        this.numVertices = numVertices
-        this.AdjList = new Map()
+class Graph {
+
+    constructor() {
+        this.numVertices = 0
+        this.adj = {}
     }
-    addVertex = (v) => { 
-        this.AdjList.set(v, null)
-        this.numVertices++ 
-    } 
-    addEdge = (v, w) => {
-        this.AdjList.get(v).push(w)
+
+    addVertex(v) {
+        this.adj[v] = []
+        this.numVertices++
+    }
+
+    addEdge(v, w) {
+        this.adj[v].push(w)
         // Undirected graph so must add opposite edge
-        this.AdjList.get(w).push(v)  
+        this.adj[w].push(v)
     }
-} 
+    checkAdj(v){
+        return this.adj[v]
+    }
+}
+
+exports.Graph = Graph
